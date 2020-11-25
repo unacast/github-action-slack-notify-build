@@ -1,9 +1,13 @@
-# [1.2.0](https://github.com/voxmedia/github-action-slack-notify-build/compare/v1.1.3...v1.2.0) (2020-11-20)
+# [1.2.1](https://github.com/voxmedia/github-action-slack-notify-build/compare/v1.1.3...v1.2.1) (2020-11-25)
 
 
 ### Features
+- Fetches the Actor ("The name of the person or app that initiated the workflow") and sets that as an Author field in the
+  Slack attachment.
+  
+# v1.2.0 - 11/20/2020
 
-* Add semantic release ([6d56e60](https://github.com/voxmedia/github-action-slack-notify-build/commit/6d56e60b7083b18466446dcf4b45f1b566235400))
+- Add semantic release
 
 # v1.1.3 - 11/10/2020
 
