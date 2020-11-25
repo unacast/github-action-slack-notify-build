@@ -20,6 +20,9 @@ inputs:
   message:
     description: 'A custom message.'
     required: false
+  actor:
+    description: 'The author/actor of the action.'
+    required: true
   message_id:
     description: 'The ID of the existing Slack message to update.'
     required: false

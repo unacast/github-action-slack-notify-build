@@ -1,7 +1,7 @@
 const { context } = require('@actions/github');
 
-function buildSlackAttachments({ status, color, github }) {
-  const { payload, ref, workflow, eventName, actor, message } = github.context;
+function buildSlackAttachments({ status, color, github, message }) {
+  const { payload, ref, workflow, eventName, actor } = github.context;
   const { owner, repo } = context.repo;
   const event = eventName;
   const branch = event === 'pull_request' ? payload.pull_request.head.ref : ref.replace('refs/heads/', '');
@@ -49,7 +49,7 @@ function buildSlackAttachments({ status, color, github }) {
         {
           title: 'Message',
           value: message,
-          short: true,
+          short: false,
         },
       ],
       footer_icon: 'https://github.githubassets.com/favicon.ico',
