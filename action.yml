@@ -1,4 +1,4 @@
-name: 'Slack Notify Build'
+name: 'Slack Notify Build - Mirta'
 description: 'Report GitHub Actions build status on Slack'
 branding:
   icon: message-square
@@ -17,6 +17,9 @@ inputs:
     description: 'The color of the Slack attachment.'
     required: true
     default: '#cccccc'
+  message:
+    description: 'A custom message.'
+    required: false
   message_id:
     description: 'The ID of the existing Slack message to update.'
     required: false
