@@ -41,6 +41,16 @@ describe('Utils', () => {
       });
     });
 
+    it('show custom message', () => {
+      const attachments = buildSlackAttachments({ status: 'STARTED', color: 'good', github: GITHUB_PUSH_EVENT });
+
+      expect(attachments[0].fields.find(a => a.title === 'Message')).toEqual({
+        title: 'Message',
+        value: 'message',
+        short: true,
+      });
+    });
+
     describe('for push events', () => {
       it('links to the action workflow', () => {
         const attachments = buildSlackAttachments({ status: 'STARTED', color: 'good', github: GITHUB_PUSH_EVENT });
