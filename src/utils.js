@@ -38,7 +38,7 @@ function buildSlackAttachments({ status, color, github, message }) {
         referenceLink,
         {
           title: 'Event',
-          value: event,
+          value: message,
           short: true,
         },
         {
