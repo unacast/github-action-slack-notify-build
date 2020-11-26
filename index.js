@@ -17,7 +17,7 @@ const { buildSlackAttachments, formatChannelName } = require('./src/utils');
       core.setFailed(`You must provider either a 'channel' or a 'channel_id'.`);
       return;
     }
-
+    console.log(message);
     const attachments = buildSlackAttachments({ status, color, github, message });
     const channelId = core.getInput('channel_id') || (await lookUpChannelId({ slack, channel }));
 
@@ -32,6 +32,7 @@ const { buildSlackAttachments, formatChannelName } = require('./src/utils');
       channel: channelId,
       attachments,
     };
+    console.log(args);
 
     if (messageId) {
       args.ts = messageId;
